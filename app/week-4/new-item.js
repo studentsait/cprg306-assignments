@@ -1,18 +1,13 @@
 "use client";
-
 import { useState } from 'react';
-
 export default function NewItem() {
   const [quantity, setQuantity] = useState(1);
-
   const increment = () => {
     setQuantity(prevQuantity => Math.min(prevQuantity + 1, 20));
   };
-
   const decrement = () => {
     setQuantity(prevQuantity => Math.max(prevQuantity - 1, 1));
   };
-
   return (
     <div className="w-full max-w-md bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <h2 className="text-2xl font-bold mb-4">Add New Item</h2>
